@@ -1,0 +1,21 @@
+﻿@model BookStore.Models.Book
+
+@{   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Book</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, "Book name")
+    <br />
+    @Html.EditorFor(model => model.Name)
+    <br /><br />
+    @Html.LabelFor(model => model.Author, "Author")
+    <br />
+    @Html.EditorFor(model => model.Author)
+    <br /><br />
+    <input type="submit" value="Add" />
+}
+
